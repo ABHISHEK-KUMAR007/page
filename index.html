@@ -74,15 +74,8 @@ createHearts();
 const yes=document.getElementById("yes");
 const no=document.getElementById("no");
 
-function move(){
- const area=document.querySelector(".button-area");
- const maxX=area.clientWidth-yes.offsetWidth;
- const maxY=area.clientHeight-yes.offsetHeight;
- yes.style.left=Math.random()*maxX+"px";
- yes.style.top=Math.random()*maxY+"px";
-}
-yes.addEventListener("mouseenter",move);
-yes.addEventListener("mouseover",move);
+
+
 yes.addEventListener("touchstart",e=>{e.preventDefault();move();});
 yes.onclick=sorry;
 no.onclick=thankyou;
