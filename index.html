@@ -2,325 +2,120 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>For You</title>
-
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>For XYZ ❤️</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
-
 <style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Poppins,sans-serif;
-}
-
+*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins,sans-serif}
 body{
-    overflow:hidden;
-    background:linear-gradient(-45deg,#ff9a9e,#fad0c4,#fbc2eb,#a18cd1);
-    background-size:400% 400%;
-    animation:bg 12s ease infinite;
-    height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
+min-height:100vh;overflow:hidden;display:flex;justify-content:center;align-items:center;
+background:linear-gradient(-45deg,#ff9a9e,#fad0c4,#fbc2eb,#a18cd1);
+background-size:400% 400%;animation:bg 12s ease infinite;
 }
-
-@keyframes bg{
-0%{background-position:0% 50%;}
-50%{background-position:100% 50%;}
-100%{background-position:0% 50%;}
-}
-
+@keyframes bg{0%{background-position:0 50%}50%{background-position:100% 50%}100%{background-position:0 50%}}
 .card{
-    width:650px;
-    height:480px;
-    padding:50px;
-    border-radius:30px;
-    background:rgba(255,255,255,.15);
-    backdrop-filter:blur(20px);
-    box-shadow:0 20px 50px rgba(0,0,0,.3);
-    text-align:center;
-    position:relative;
-    z-index:5;
+width:min(92vw,650px);min-height:480px;padding:40px 25px;position:relative;
+background:rgba(255,255,255,.15);backdrop-filter:blur(18px);
+border-radius:28px;box-shadow:0 20px 50px rgba(0,0,0,.3);
+text-align:center;z-index:2;
 }
-
-h1{
-    font-family:'Dancing Script',cursive;
-    font-size:70px;
-    color:white;
-    margin-bottom:10px;
-}
-
-h2{
-    color:white;
-    font-size:38px;
-    margin-bottom:35px;
-}
-
-.question{
-    color:white;
-    font-size:34px;
-    font-weight:bold;
-}
-
-/* BUTTON AREA */
-
-.button-area{
-    position:absolute;
-    left:0;
-    right:0;
-    bottom:40px;
-    height:70px;
-}
-
+h1{font-family:"Dancing Script",cursive;font-size:clamp(42px,8vw,70px);color:#fff}
+h2{margin:15px 0 35px;color:#fff;font-size:clamp(22px,4vw,38px)}
+.question{font-size:clamp(24px,4vw,34px);font-weight:700;color:#fff}
+.button-area{position:absolute;left:0;bottom:30px;width:100%;height:120px}
 button{
-    position:absolute;
-    width:140px;
-    height:60px;
-    border:none;
-    border-radius:50px;
-    cursor:pointer;
-    font-size:22px;
-    transition:.25s;
+position:absolute;width:120px;height:52px;border:none;border-radius:40px;
+font-size:18px;font-weight:600;cursor:pointer;transition:.25s;
 }
-
-button:hover{
-    transform:scale(1.08);
-    box-shadow:0 10px 30px rgba(0,0,0,.3);
-}
-
-#yes{
-    background:#ff4b5c;
-    color:white;
-    left:170px;
-    top:5px;
-}
-
-#no{
-    background:white;
-    color:#ff4081;
-    right:170px;
-    top:5px;
-}
-
-/* HEARTS */
-
-.heart{
-    position:absolute;
-    bottom:-50px;
-    font-size:25px;
-    animation:float linear infinite;
-    opacity:.8;
-    pointer-events:none;
-}
-
+button:hover{transform:scale(1.06)}
+#yes{left:18%;top:55px;background:#ff4b5c;color:#fff}
+#no{right:18%;top:55px;background:#fff;color:#ff4081}
+.heart{position:fixed;bottom:-40px;pointer-events:none;animation:float linear infinite}
 @keyframes float{
-
-0%{
-transform:translateY(0) rotate(0deg);
-opacity:0;
+0%{transform:translateY(0) rotate(0);opacity:0}
+20%{opacity:1}
+100%{transform:translateY(-120vh) rotate(360deg);opacity:0}
 }
-
-20%{
-opacity:1;
-}
-
-100%{
-transform:translateY(-120vh) rotate(360deg);
-opacity:0;
-}
-
-}
-
-.fade{
-animation:fade .8s;
-}
-
-@keyframes fade{
-from{
-opacity:0;
-transform:scale(.9);
-}
-to{
-opacity:1;
-transform:scale(1);
-}
-}
-
 .scene{
-display:flex;
-justify-content:center;
-align-items:center;
-flex-direction:column;
-height:100vh;
-color:white;
-text-align:center;
+display:flex;flex-direction:column;justify-content:center;align-items:center;
+min-height:100vh;text-align:center;color:#fff;padding:20px;
 }
-
-.message{
-font-size:70px;
-font-family:'Dancing Script',cursive;
-margin-bottom:30px;
-text-shadow:0 5px 20px rgba(0,0,0,.4);
-}
-
-.man{
-font-size:150px;
-animation:walk 2s infinite alternate;
-}
-
-.flower{
-display:inline-block;
-animation:flower 1s infinite alternate;
-}
-
-@keyframes walk{
-from{transform:translateX(-15px);}
-to{transform:translateX(15px);}
-}
-
-@keyframes flower{
-from{transform:rotate(-10deg);}
-to{transform:rotate(15deg);}
-}
-
-.sub{
-font-size:28px;
-margin-top:25px;
+.message{font-family:"Dancing Script",cursive;font-size:clamp(44px,8vw,72px)}
+.man{font-size:clamp(90px,18vw,150px);animation:walk 1.5s infinite alternate}
+.sub{font-size:clamp(18px,3vw,28px);margin-top:20px}
+.flower{display:inline-block;animation:flower 1s infinite alternate}
+@keyframes walk{from{transform:translateX(-10px)}to{transform:translateX(10px)}}
+@keyframes flower{from{transform:rotate(-10deg)}to{transform:rotate(10deg)}}
+@media(max-width:500px){
+.button-area{height:140px}
+#yes{left:8%}
+#no{right:8%}
 }
 </style>
 </head>
-
 <body>
-
 <div id="app"></div>
-
 <script>
-
 const app=document.getElementById("app");
-
 home();
 
 function home(){
-
 app.innerHTML=`
-
-<div class="card fade">
-
-    <h1>Hi Shivani</h1>
-
-    <h2>I have something to ask...</h2>
-
-    <div class="question">
-        Are You Angry? 🥺
-    </div>
-
-    <div class="button-area">
-        <button id="yes">Yes 😠</button>
-        <button id="no">No ❤️</button>
-    </div>
-
+<div class="card">
+<h1>Hi XYZ ❤️</h1>
+<h2>I have something to ask...</h2>
+<div class="question">Are You Angry? 🥺</div>
+<div class="button-area">
+<button id="yes">Yes 😠</button>
+<button id="no">No ❤️</button>
 </div>
-
-`;
-
+</div>`;
 createHearts();
-
 const yes=document.getElementById("yes");
 const no=document.getElementById("no");
 
 function move(){
-
-    const area=document.querySelector(".button-area");
-
-    const maxX=area.clientWidth-yes.offsetWidth;
-    const maxY=area.clientHeight-yes.offsetHeight;
-
-    yes.style.left=Math.random()*maxX+"px";
-    yes.style.top=Math.random()*maxY+"px";
-
+ const area=document.querySelector(".button-area");
+ const maxX=area.clientWidth-yes.offsetWidth;
+ const maxY=area.clientHeight-yes.offsetHeight;
+ yes.style.left=Math.random()*maxX+"px";
+ yes.style.top=Math.random()*maxY+"px";
 }
-
-// yes.addEventListener("mouseenter",move);
-// yes.addEventListener("mouseover",move);
-yes.addEventListener("touchstart",move);
-
-yes.addEventListener("click",sorry);
-
-no.addEventListener("click",thankyou);
-
+yes.addEventListener("mouseenter",move);
+yes.addEventListener("mouseover",move);
+yes.addEventListener("touchstart",e=>{e.preventDefault();move();});
+yes.onclick=sorry;
+no.onclick=thankyou;
 }
 
 function thankyou(){
-
 document.body.innerHTML=`
-
-<div class="scene fade">
-
-<div class="message">Achha laga Jaan kar</div>
-
-<div class="man">
-🧍‍♂️ <span class="flower">🌹</span>
-</div>
-
-<div class="sub">
-Mujhe Laga hi tha 😊
-</div>
-
-</div>
-
-`;
-
+<div class="scene">
+<div class="message">Thank You ❤️</div>
+<div class="man">🧍‍♂️ <span class="flower">🌹</span></div>
+<div class="sub">I'm so happy you're not angry 😊</div>
+</div>`;
 }
-
 function sorry(){
-
 document.body.innerHTML=`
-
-<div class="scene fade">
-
-<div class="message">Ooo Aisa Kya 😔</div>
-
-<div class="man">
-🧍‍♂️ <span class="flower">💐</span>
-</div>
-
-<div class="sub">
-Per Maine to kuchh bola hi nhi
-</div>
-
-</div>
-
-`;
-
+<div class="scene">
+<div class="message">I'm Sorry 😔</div>
+<div class="man">🧍‍♂️ <span class="flower">💐</span></div>
+<div class="sub">Please forgive me ❤️</div>
+</div>`;
 }
-
 function createHearts(){
-
 for(let i=0;i<60;i++){
-
-    let h=document.createElement("div");
-
-    h.className="heart";
-
-    h.innerHTML="❤️";
-
-    h.style.left=Math.random()*100+"vw";
-
-    h.style.fontSize=(20+Math.random()*25)+"px";
-
-    h.style.animationDuration=(5+Math.random()*6)+"s";
-
-    h.style.animationDelay=Math.random()*5+"s";
-
-    document.body.appendChild(h);
-
+ let h=document.createElement("div");
+ h.className="heart";
+ h.innerHTML="❤️";
+ h.style.left=Math.random()*100+"vw";
+ h.style.fontSize=(18+Math.random()*20)+"px";
+ h.style.animationDuration=(5+Math.random()*5)+"s";
+ h.style.animationDelay=Math.random()*5+"s";
+ document.body.appendChild(h);
 }
-
 }
-
 </script>
-
 </body>
 </html>
